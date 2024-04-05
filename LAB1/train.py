@@ -1,23 +1,20 @@
 import os
 import warnings
 import numpy as np
-from tqdm import tqdm
-import matplotlib.pyplot as plt
-from argparse import ArgumentParser
-
-import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import DataLoader
-
-from torchvision import transforms
-import torchvision.models as models
-from torchvision.datasets import ImageFolder
-
-import seaborn as sns
-from matplotlib.ticker import MaxNLocator
-
 import torch
 import torchvision
+import torch.nn as nn
+import torch.optim as optim
+import seaborn as sns
+import torchvision.models as models
+import matplotlib.pyplot as plt
+
+from tqdm import tqdm
+from argparse import ArgumentParser
+from torch.utils.data import DataLoader
+from torchvision import transforms
+from torchvision.datasets import ImageFolder
+from matplotlib.ticker import MaxNLocator
 
 def measurement(outputs, labels, smooth=1e-10):
     tp, tn, fp, fn = smooth, smooth, smooth, smooth
